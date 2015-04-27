@@ -69,6 +69,7 @@
     <Content Include="Sitecore7\Sitecore\shell\Applications\Content Manager\Default.aspx" />
     <Content Include="Sitecore8\Sitecore\shell\Applications\Content Manager\Default.aspx" />
     <Content Include="Packages\Scope to this Items-1.0.zip" />
+    <Content Include="Packages\Scope to this Packages-2.zip" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
   </ItemGroup>
   <ItemGroup>
