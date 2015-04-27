@@ -63,7 +63,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\z_CoreBlimey.ScopeToThis.config">
+    <Content Include="App_Config\Include\CoreBlimey.ScopeToThis.config">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Sitecore7\Sitecore\shell\Applications\Content Manager\Default.aspx" />
