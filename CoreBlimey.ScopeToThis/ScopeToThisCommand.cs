@@ -14,22 +14,10 @@ namespace CoreBlimey.ScopeToThis
 {
     public class ScopeToThisCommand : Command
     {
-        public static string ScopedItem
-        {
-            get
-            {
-                return Registry.GetString("/Current_User/UserOptions.View.ScopedItem");
-            }
-            set
-            {
-                Registry.SetString("/Current_User/UserOptions.View.ScopedItem", value);
-            }
-        }
-
         public override CommandState QueryState(CommandContext context)
         {
             Assert.IsNotNull(context, "context is null");
-            return string.IsNullOrEmpty(ScopedItem) ? CommandState.Enabled : CommandState.Hidden;
+            return string.IsNullOrEmpty(ScopeToThisHelper.ScopedItem) ? CommandState.Enabled : CommandState.Hidden;
         }
 
         public override void Execute(CommandContext context)
@@ -37,9 +25,9 @@ namespace CoreBlimey.ScopeToThis
             if (context.Items[0] == null)
                 return;
 
-            if (string.IsNullOrEmpty(ScopedItem))
+            if (string.IsNullOrEmpty(ScopeToThisHelper.ScopedItem))
             {
-                ScopedItem = context.Items[0].ID.ToString();
+                ScopeToThisHelper.ScopedItem = context.Items[0].ID.ToString();
             }
 
             var url = ScopeToThisHelper.GetUrl(context.Items[0]);
