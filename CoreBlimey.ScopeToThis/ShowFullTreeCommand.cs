@@ -19,7 +19,7 @@ namespace CoreBlimey.ScopeToThis
             if(context.Items[0] == null)
                 return;
 
-            ScopeToThisCommand.ScopedItem = string.Empty;
+            ScopeToThisHelper.ScopedItem = string.Empty;
 
             var topNode = context.Items[0].Database.GetItem(SitecoreNode);
             var url = ScopeToThisHelper.GetUrl(topNode);
